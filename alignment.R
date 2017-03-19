@@ -6,7 +6,7 @@ biocLite("msa")
 library(msa)
 system.file("tex", "texshade.sty", package="msa")
 #open sequence file
-mySequences <- readAAStringSet("wrky.txt")  # use "readDNAStringSet" if you are using DNA sequence
+mySequences <- readAAStringSet("wrky.txt") # input file  # use "readDNAStringSet" if you are using DNA sequence
 mySequences
 ## make alignment
 myClustalWAlignment <- msa(mySequences, "ClustalW")  #three algoritm for alignment "ClustalW", "ClustalOmega" or "Muscle"
