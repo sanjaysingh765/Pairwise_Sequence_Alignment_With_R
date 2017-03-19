@@ -2,22 +2,15 @@
 ## try http:// if https:// URLs are not supported
 source("https://bioconductor.org/biocLite.R")
 biocLite("msa")
-
 #initiate libraries
 library(msa)
 system.file("tex", "texshade.sty", package="msa")
-
-
 #open sequence file
 mySequences <- readAAStringSet("wrky.txt")  # use "readDNAStringSet" if you are using DNA sequence
 mySequences
-
-
 ## make alignment
 myClustalWAlignment <- msa(mySequences, "ClustalW")  #three algoritm for alignment "ClustalW", "ClustalOmega" or "Muscle"
 myClustalWAlignment
-
-
 ##Visualize alignment and save
 test <- msaPrettyPrint(
 myClustalWAlignment,
